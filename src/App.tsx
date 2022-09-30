@@ -1,5 +1,7 @@
 import React from "react";
 
-const App: React.FC = () => <div>App</div>;
+import Router from "routes";
+
+const App: React.FC = () => <Router />;
 
 export default App;

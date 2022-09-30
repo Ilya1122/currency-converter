@@ -1,7 +1,10 @@
 import React from "react";
 import * as ReactDOMClient from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import StyledEngineProvider from "@mui/material/StyledEngineProvider";
+import CssBaseline from "@mui/material/CssBaseline";
+
 import App from "./App";
-import "./index.css";
 
 const root = ReactDOMClient.createRoot(
   document.getElementById("root") as HTMLElement
@@ -9,6 +12,12 @@ const root = ReactDOMClient.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <StyledEngineProvider injectFirst>
+        <CssBaseline />
+
+        <App />
+      </StyledEngineProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
